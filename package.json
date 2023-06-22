@@ -12,17 +12,24 @@
     "types",
     "LICENSE"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/swlws/json-ify.git"
-  },
   "scripts": {
     "build": "tsc -b && vite build",
     "test": "esno test/index.ts",
     "release": "esno script/release.ts"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "json",
+    "stringify",
+    "parse",
+    "function",
+    "map",
+    "set"
+  ],
+  "author": "swlws <swlwsgg@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swlws/json-ify.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.3.1",
