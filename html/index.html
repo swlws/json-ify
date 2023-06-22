@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSONify</title>
+    <script src="../lib/index.umd.js"></script>
+  </head>
+  <body>
+    <h1>JSONify umd</h1>
+    <script>
+      console.log(JSONify);
+
+      const { stringify, parse } = JSONify;
+
+      const obj = {
+        a: null,
+        b: undefined,
+        c: 100,
+        d: "dd",
+        e: true,
+        f: {},
+        g: [],
+        h: new Date(),
+        i: new Set([11, 22, 33, new Set([55, 66, 77])]),
+        j: new Map([
+          ["age", { age: 100 }],
+          [{ age: 100 }, "age"],
+        ]),
+        k: function () {
+          return this.a;
+        },
+        l: () => {
+          return "arrow function";
+        },
+        m: /abc/g,
+        n: new RegExp("abc", "img"),
+      };
+
+      const rt = stringify(obj, 2);
+      console.log(rt);
+      const rt2 = parse(rt);
+      console.log(rt2);
+    </script>
+  </body>
+</html>
