@@ -42,6 +42,6 @@ function publish() {
 function main() {
   setNewPackageVersion();
   buildDist();
-  // publish();
+  publish();
 }
 main();

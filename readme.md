@@ -14,7 +14,7 @@ a json serialization lib, supported data type:
 # usage
 
 ```ts
-import { stringify, parse } from "json-ify";
+import { stringify, parse } from "@swl/json-ify";
 
 const obj = {
   a: null,
